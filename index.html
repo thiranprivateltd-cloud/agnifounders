@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AgniFounders: India's movement for young student founders (aged 16-24), especially in Tier 2/3 cities. Dream, Build, and Launch your startup. Powered by Thiran Private Limited.">
+  <meta name="keywords" content="student founders, startup incubator, student entrepreneurship, Tier 2, Tier 3, India startups, Varshith G S, Thiran">
+  <meta name="author" content="AgniFounders">
+  <meta property="og:title" content="AgniFounders - India's Movement for Young Student Founders">
+  <meta property="og:description" content="Discover, connect, and accelerate the next generation of builders across India. Dream · Build · Launch.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://agnifounders.in">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://agnifounders.in">
+  <title>AgniFounders - India's Movement for Young Student Founders</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- Sticky Blurred Header -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link" aria-label="AgniFounders Home">
+        <div class="logo-text">AgniFounders<span>.</span></div>
+        <div class="logo-brand-sub">Powered by Thiran</div>
+      </a>
+      <nav class="nav-links-container" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="membership.html" class="nav-link">Membership</a></li>
+          <li><a href="members.html" class="nav-link">Members</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="https://instagram.com/thiran_groups" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="https://linkedin.com/in/varshithgs" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="membership.html" class="btn btn-primary" aria-label="Apply for membership">Apply Now</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="membership.html" class="mobile-nav-link">Membership</a></li>
+      <li><a href="members.html" class="mobile-nav-link">Members</a></li>
+      <li><a href="events.html" class="mobile-nav-link">Events</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <a href="membership.html" class="btn btn-primary" aria-label="Apply for membership">Apply Now</a>
+  </aside>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-grain-overlay"></div>
+      <canvas id="particle-canvas" class="hero-particles"></canvas>
+      <div class="container hero-content-container">
+        <div class="hero-text-block">
+          <div class="badge-glow-container">
+            <span class="badge-glow"><i data-lucide="flame"></i> Dream · Build · Launch</span>
+          </div>
+          <h1 class="hero-title">India's movement for <span class="accent-gradient">young student founders</span></h1>
+          <p class="hero-subtitle">We discover, connect, and accelerate the next generation of builders across India's Tier 2 and Tier 3 cities. Fueling ambitious minds aged 16–24.</p>
+          <div class="hero-ctas">
+            <a href="membership.html" class="btn btn-primary" aria-label="Apply Now">Apply Now <i data-lucide="arrow-right"></i></a>
+            <a href="#why-join" class="btn btn-secondary" aria-label="Learn More">Learn More</a>
+          </div>
+        </div>
+        
+        <!-- Stats Counter Strip -->
+        <div class="stats-counter-grid mt-2">
+          <div class="stat-card">
+            <div class="stat-number animate-stat" id="stat-members" data-target="0">0</div>
+            <div class="stat-label">Members</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="30">0</div>
+            <div class="stat-label">Cities</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="0">0</div>
+            <div class="stat-label">Startups Built</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="0">0</div>
+            <div class="stat-label">Events Hosted</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Strip -->
+    <section class="mission-strip">
+      <div class="mission-strip-content">
+        <span>Dream</span>
+        <span class="accent-dot">•</span>
+        <span>Build</span>
+        <span class="accent-dot">•</span>
+        <span>Launch</span>
+      </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section id="why-join" class="section-padding reveal">
+      <div class="container">
+        <h2 class="section-title">Why AgniFounders?</h2>
+        <div class="features-grid mt-2">
+          <div class="card feature-card">
+            <div class="feature-icon-wrapper community-icon">
+              <i data-lucide="users"></i>
+            </div>
+            <h3>Community</h3>
+            <p>500+ active student founders across India, sharing knowledge, code, and resources in one moderated, spam-free hub.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-icon-wrapper knowledge-icon">
+              <i data-lucide="book-open"></i>
+            </div>
+            <h3>Knowledge</h3>
+            <p>Practical workshops, fireside chats with successful builders, and curated resources on getting from 0 to 1.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-icon-wrapper opportunity-icon">
+              <i data-lucide="award"></i>
+            </div>
+            <h3>Opportunities</h3>
+            <p>Weekly listings of grants, student-friendly hackathons, and credits for server hosting, tools, and SaaS API products.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-icon-wrapper visibility-icon">
+              <i data-lucide="eye"></i>
+            </div>
+            <h3>Visibility</h3>
+            <p>Get featured in demo days, press newsletters, and showcase your startup directly to early-stage VCs and active angel networks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership Preview -->
+    <section class="section-padding reveal membership-preview-section">
+      <div class="container">
+        <h2 class="section-title">Choose your membership</h2>
+        <div class="tiers-preview-grid mt-2">
+          <!-- Spark -->
+          <div class="card tier-preview-card border-spark">
+            <div class="tier-badge-status spark">Spark Tier</div>
+            <h3 class="tier-title">Spark</h3>
+            <div class="tier-price">₹299<span>/year</span></div>
+            <p class="tier-desc">For explorers, students finding ideas, and curious builders.</p>
+            <ul class="tier-checklist">
+              <li><i data-lucide="check" class="check-icon"></i> Access to digital community</li>
+              <li><i data-lucide="check" class="check-icon"></i> Join virtual workshops</li>
+              <li><i data-lucide="check" class="check-icon"></i> Monthly founder circles</li>
+              <li><i data-lucide="check" class="check-icon"></i> Weekly resources newsletter</li>
+              <li><i data-lucide="check" class="check-icon"></i> Basic member directory listing</li>
+            </ul>
+            <a href="membership.html" class="btn btn-secondary w-full mt-2" aria-label="Apply for Spark tier">Apply For Spark</a>
+          </div>
+
+          <!-- Builder -->
+          <div class="card tier-preview-card border-builder popular-tier">
+            <div class="popular-badge">Most Popular</div>
+            <div class="tier-badge-status builder">Builder Tier</div>
+            <h3 class="tier-title">Builder</h3>
+            <div class="tier-price">₹599<span>/year</span></div>
+            <p class="tier-desc">For active student builders working on prototypes or MVP builds.</p>
+            <ul class="tier-checklist">
+              <li><i data-lucide="check" class="check-icon"></i> Everything in Spark access</li>
+              <li><i data-lucide="check" class="check-icon"></i> Priority matching with builders</li>
+              <li><i data-lucide="check" class="check-icon"></i> Exclusive builder-only meetups</li>
+              <li><i data-lucide="check" class="check-icon"></i> Beta feedback circles</li>
+              <li><i data-lucide="check" class="check-icon"></i> Free developer tool credits</li>
+            </ul>
+            <a href="membership.html" class="btn btn-primary w-full mt-2" aria-label="Apply for Builder tier">Apply For Builder</a>
+          </div>
+
+          <!-- Founder Pro -->
+          <div class="card tier-preview-card border-pro">
+            <div class="tier-badge-status pro">Founder Pro Tier</div>
+            <h3 class="tier-title">Founder Pro</h3>
+            <div class="tier-price">₹999<span>/year</span></div>
+            <p class="tier-desc">For live startups looking to launch, scale, and raise capital.</p>
+            <ul class="tier-checklist">
+              <li><i data-lucide="check" class="check-icon"></i> Everything in Builder access</li>
+              <li><i data-lucide="check" class="check-icon"></i> Demo Day presentation invites</li>
+              <li><i data-lucide="check" class="check-icon"></i> 1-on-1 mentor guidance sessions</li>
+              <li><i data-lucide="check" class="check-icon"></i> Hot-lead investor introductions</li>
+              <li><i data-lucide="check" class="check-icon"></i> Feature profile on website catalog</li>
+            </ul>
+            <a href="membership.html" class="btn btn-secondary w-full mt-2" aria-label="Apply for Founder Pro tier">Apply For Founder Pro</a>
+          </div>
+        </div>
+
+        <div class="preview-footer text-center mt-2">
+          <p>All memberships are annual. Powered by Thiran Private Limited.</p>
+          <a href="membership.html" class="preview-details-link mt-1">See full membership details →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder Story Teaser -->
+    <section class="section-padding reveal founder-teaser-section">
+      <div class="container">
+        <div class="founder-teaser-grid">
+          <div class="founder-quote-block">
+            <span class="quote-mark">“</span>
+            <blockquote>I built this because no one was building it for us. Student founders in Tier 2 & 3 cities have the drive, but lack access. We are here to bridge that gap.</blockquote>
+            <cite>— Varshith G S, Founder</cite>
+          </div>
+          <div class="founder-info-block">
+            <h2 class="section-title text-left">Our Origin</h2>
+            <p>AgniFounders was founded by <strong>Varshith G S</strong>, Founder & CEO of Thiran Private Limited, with a distinct mission: to democratize access to resources, networks, and opportunities for young student builders across India.</p>
+            <p class="mt-1">We believe talent is evenly distributed, but opportunity is not. We find outstanding potential in non-metro engineering and arts colleges and give them the platform to fly.</p>
+            <a href="about.html" class="btn btn-outline-amber mt-2" aria-label="Read our story">Read our story →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamic Upcoming Events Teaser Section (Hidden by default, shown via JS if events are posted) -->
+    <section id="upcoming-events-teaser" class="section-padding reveal events-teaser-section" style="display: none; border-bottom: 1px solid var(--border-color); background-color: #060609;">
+      <div class="container">
+        <h2 class="section-title">Upcoming events</h2>
+        <div id="events-preview-grid" class="events-preview-grid mt-2">
+          <!-- Populated dynamically via JS -->
+        </div>
+        <div class="text-center mt-2">
+          <a href="events.html" class="preview-details-link">View all events →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter Hub Invitation -->
+    <section class="section-padding reveal events-teaser-section">
+      <div class="container text-center">
+        <h2 class="section-title">Bring AgniFounders to your city</h2>
+        <p class="section-subtitle mt-1" style="max-width: 600px; margin-left: auto; margin-right: auto;">Want to host offline meetups, coding mixers, or co-founder speed-dating sessions at your campus or local hub? Become a Chapter Host!</p>
+        <div class="mt-2">
+          <a href="events.html" class="btn btn-primary" aria-label="Learn how to host an event">Host an Event <i data-lucide="map-pin"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thiran Integration Banner -->
+    <section class="thiran-banner">
+      <div class="container text-center">
+        <h2 class="thiran-banner-title">Powered by Thiran Private Limited</h2>
+        <p class="thiran-banner-subtitle">Building India's next generation of student startups and technology leaders.</p>
+        <div class="thiran-products-grid mt-2">
+          <a href="https://thiranprivateltd.vercel.app" target="_blank" rel="noopener noreferrer" class="thiran-product-pill">
+            <span class="product-name">LaunchLab</span>
+            <span class="product-desc">Web development agency</span>
+          </a>
+          <a href="https://thiranprivateltd.vercel.app" target="_blank" rel="noopener noreferrer" class="thiran-product-pill">
+            <span class="product-name">NextStep AI</span>
+            <span class="product-desc">Smart career guidance portal</span>
+          </a>
+          <a href="https://thiranprivateltd.vercel.app" target="_blank" rel="noopener noreferrer" class="thiran-product-pill">
+            <span class="product-name">Thiran HQ</span>
+            <span class="product-desc">Corporate innovation hub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo-col">
+          <a href="index.html" class="logo-link">
+            <div class="logo-text">AgniFounders<span>.</span></div>
+          </a>
+          <p class="footer-tagline">India's movement for young student founders aged 16–24. Dream · Build · Launch.</p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com/thiran_groups" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="https://linkedin.com/in/varshithgs" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="https://chat.whatsapp.com/JBmzjFNcBoR2ivOhcO136s" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="WhatsApp Community"><i data-lucide="message-square"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="footer-col-title">Organisation</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+            <li><a href="blog.html">Blog / Insights</a></li>
+            <li><a href="contact.html">Work With Us</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-col-title">Membership</h4>
+          <ul class="footer-links">
+            <li><a href="membership.html#spark">Spark Tier</a></li>
+            <li><a href="membership.html#builder">Builder Tier</a></li>
+            <li><a href="membership.html#pro">Founder Pro Tier</a></li>
+            <li><a href="membership.html#how-to-pay">How to Join</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-info">
+          Powered by <a href="https://thiranprivateltd.vercel.app" target="_blank" rel="noopener noreferrer">Thiran Private Limited</a> | Built with <span>Dream · Build · Launch</span>
+        </div>
+        <div>
+          &copy; 2026 AgniFounders. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Button (FAB) -->
+  <a href="membership.html" class="apply-fab" aria-label="Apply Now for Membership">
+    <i data-lucide="arrow-up-right"></i>
+  </a>
+
+  <!-- Cookie / Analytics Consent Banner -->
+  <div id="analytics-banner" class="analytics-banner">
+    <div class="analytics-text">
+      We use basic cookies and local storage to optimize your browsing experience. By clicking "Accept", you agree to our analytics policies.
+    </div>
+    <div class="analytics-buttons">
+      <button id="decline-cookies" class="btn btn-secondary" aria-label="Decline cookies">Decline</button>
+      <button id="accept-cookies" class="btn btn-primary" aria-label="Accept cookies">Accept</button>
+    </div>
+  </div>
+
+  <!-- Lucide CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Scripts -->
+  <script src="js/global.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

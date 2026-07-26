@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover our story, mission, and meet our founder Varshith G S. Learn how AgniFounders accelerates student startup journeys under Thiran Private Limited.">
+  <title>Our Story - About AgniFounders</title>
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    /* Specific overrides/additions for About page to avoid bloated sheets */
+    .about-hero {
+      padding: 8rem 0 3rem 0;
+      background: radial-gradient(circle at bottom, rgba(123, 94, 167, 0.08), transparent 70%), #0A0A0F;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .story-text p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .founder-card-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .founder-profile-card {
+      text-align: center;
+      width: 100%;
+      max-width: 350px;
+    }
+    .founder-photo-container {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem auto;
+      border: 3px solid var(--accent-primary);
+      overflow: hidden;
+      padding: 5px;
+      background-color: var(--bg-primary);
+    }
+    .founder-avatar-placeholder {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .founder-profile-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.25rem;
+    }
+    .founder-title {
+      font-size: 0.9rem;
+      color: var(--accent-primary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    .founder-bio {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .founder-socials {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .founder-social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      transition: var(--transition-smooth);
+    }
+    .founder-social-link:hover {
+      color: var(--accent-primary);
+      border-color: var(--accent-primary);
+      background-color: rgba(245, 166, 35, 0.05);
+      transform: translateY(-2px);
+    }
+    
+    /* Pillars Section */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .pillar-card {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .pillar-icon-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: rgba(245, 166, 35, 0.1);
+      color: var(--accent-primary);
+      margin-bottom: 0.5rem;
+    }
+    .pillar-icon-circle svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* How it works */
+    .how-it-works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      position: relative;
+    }
+    .flow-step-card {
+      text-align: center;
+      position: relative;
+    }
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--accent-secondary);
+      color: #fff;
+      font-weight: 700;
+      font-family: var(--font-heading);
+      margin-bottom: 1.25rem;
+    }
+    .flow-step-card h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+    }
+
+    /* Advisory Board */
+    .advisor-section {
+      background-color: #060609;
+      border-top: 1px solid var(--border-color);
+    }
+    .advisors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .advisor-card {
+      text-align: center;
+      border: 1px dashed var(--border-color);
+      background-color: rgba(255, 255, 255, 0.01);
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .advisor-icon-placeholder {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,0.03);
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Connection banner */
+    .connection-card {
+      background: linear-gradient(135deg, rgba(123, 94, 167, 0.15), rgba(245, 166, 35, 0.05)), var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    .connection-content {
+      flex: 1.5;
+    }
+    .connection-content h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    .connection-logo {
+      flex: 0.5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .connection-logo span {
+      color: var(--accent-secondary);
+    }
+
+    @media (max-width: 992px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .pillars-grid, .how-it-works-grid, .advisors-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .connection-card {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link" aria-label="AgniFounders Home">
+        <div class="logo-text">AgniFounders<span>.</span></div>
+        <div class="logo-brand-sub">Powered by Thiran</div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="membership.html" class="nav-link">Membership</a></li>
+          <li><a href="members.html" class="nav-link">Members</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="https://instagram.com/thiran_groups" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="https://linkedin.com/in/varshithgs" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="membership.html" class="btn btn-primary" aria-label="Apply for membership">Apply Now</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link active">About</a></li>
+      <li><a href="membership.html" class="mobile-nav-link">Membership</a></li>
+      <li><a href="members.html" class="mobile-nav-link">Members</a></li>
+      <li><a href="events.html" class="mobile-nav-link">Events</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <a href="membership.html" class="btn btn-primary" aria-label="Apply for membership">Apply Now</a>
+  </aside>
+
+  <main class="page-fade-in">
+    <!-- Hero Story Panel -->
+    <section class="about-hero">
+      <div class="container">
+        <h1 class="page-title text-center">Our Story</h1>
+        <p class="page-subtitle text-center mb-2">Empowering Tier 2 and Tier 3 cities with ecosystem access.</p>
+        
+        <div class="about-grid mt-2">
+          <div class="story-text">
+            <p>AgniFounders was born out of a stark realization: while genius and ambition are distributed evenly across the towns and colleges of India, funding, networks, and resources are highly concentrated in a few metro hubs. Student builders in non-metro engineering colleges (Tier 2 and Tier 3 cities) often work in isolation, lacking the feedback loops needed to turn code into companies.</p>
+            <p>To bridge this gap, Varshith G S founded AgniFounders (originally Udayam) as a unified movement. We exist to discover hidden engineering and product talent, connect them in a high-signal peer network, and accelerate their transition from dreamers to builders. Through workshops, hackathons, and direct capital integrations, we make startup creation a viable path for every student in India.</p>
+          </div>
+          
+          <!-- Founder Card -->
+          <div class="founder-card-wrapper">
+            <div class="card founder-profile-card">
+              <div class="founder-photo-container">
+                <div class="founder-avatar-placeholder">V</div>
+              </div>
+              <h3>Varshith G S</h3>
+              <div class="founder-title">Founder & CEO</div>
+              <p class="founder-bio">Founder & CEO of Thiran Private Limited. Devoted to building scalable technology platforms and cultivating young leadership ecosystems in India's emerging tech nodes.</p>
+              <div class="founder-socials">
+                <a href="https://instagram.com/thiran_groups" target="_blank" rel="noopener noreferrer" class="founder-social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="https://linkedin.com/in/varshithgs" target="_blank" rel="noopener noreferrer" class="founder-social-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Vision Values -->
+    <section class="section-padding core-pillars-section">
+      <div class="container">
+        <h2 class="section-title">Core Pillars</h2>
+        <div class="pillars-grid mt-2">
+          <div class="card pillar-card">
+            <div class="pillar-icon-circle">
+              <i data-lucide="compass"></i>
+            </div>
+            <h3>Mission</h3>
+            <p>Discover, connect, and accelerate ambitious student founders aged 16–24, specifically focusing on building functional ecosystems in Tier 2/3 cities across India.</p>
+          </div>
+          
+          <div class="card pillar-card">
+            <div class="pillar-icon-circle">
+              <i data-lucide="eye"></i>
+            </div>
+            <h3>Vision</h3>
+            <p>To create a decentralized network of student-run companies that drive localized economic growth and build world-class products out of everyday colleges.</p>
+          </div>
+
+          <div class="card pillar-card">
+            <div class="pillar-icon-circle">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h3>Values</h3>
+            <p>High Agency, Collaborative Building, Rapid Launch Iteration, and a commitment to helping peers scale without transactional expectations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section-padding flow-section">
+      <div class="container">
+        <h2 class="section-title">How it works</h2>
+        <div class="how-it-works-grid mt-2">
+          <div class="flow-step-card">
+            <div class="step-badge">1</div>
+            <h3>Apply</h3>
+            <p>Choose a membership tier that matches your current builder stage and submit your payment and application.</p>
+          </div>
+          
+          <div class="flow-step-card">
+            <div class="step-badge">2</div>
+            <h3>Get Accepted</h3>
+            <p>Our team reviews and accepts candidates within 24 hours, sending you email onboarding credentials.</p>
+          </div>
+
+          <div class="flow-step-card">
+            <div class="step-badge">3</div>
+            <h3>Build Together</h3>
+            <p>Unlock structured WhatsApp modules, co-founder directories, hackathons, and 1-on-1 mentorship circles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advisory Board -->
+    <section class="section-padding advisor-section">
+      <div class="container">
+        <h2 class="section-title">Advisory Board</h2>
+        <div class="advisors-grid mt-2">
+          <div class="card advisor-card">
+            <div class="advisor-icon-placeholder"><i data-lucide="user"></i></div>
+            <h3>Dharshan S</h3>
+            <p>Chief Advisory Panel</p>
+          </div>
+          <div class="card advisor-card">
+            <div class="advisor-icon-placeholder"><i data-lucide="user"></i></div>
+            <h3>Mukunthan S</h3>
+            <p>Advisory Panel</p>
+          </div>
+          <div class="card advisor-card">
+            <div class="advisor-icon-placeholder"><i data-lucide="user"></i></div>
+            <h3>Samuel Ignitius</h3>
+            <p>Advisory Panel</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thiran backing connections -->
+    <section class="section-padding connection-section">
+      <div class="container">
+        <div class="connection-card reveal">
+          <div class="connection-content">
+            <h3>Initiative of Thiran Private Limited</h3>
+            <p>AgniFounders is backed and conceptualized by <strong>Thiran Private Limited</strong>. Thiran supports young creators with technology labs, enterprise products, and digital upgrade audits. Our members enjoy integrated credits for web engineering (LaunchLab) and access to customized AI-career matching dashboards (NextStep AI).</p>
+            <a href="https://thiranprivateltd.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-outline-amber mt-1" aria-label="Visit Thiran Private Limited">Explore Thiran HQ →</a>
+          </div>
+          <div class="connection-logo" style="background-color: #ffffff; border-color: #ffffff;">
+            <img src="images/thiran_logo.png" alt="Thiran Private Limited Logo" style="max-width: 100%; height: auto; display: block;">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo-col">
+          <a href="index.html" class="logo-link">
+            <div class="logo-text">AgniFounders<span>.</span></div>
+          </a>
+          <p class="footer-tagline">India's movement for young student founders aged 16–24. Dream · Build · Launch.</p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com/thiran_groups" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="https://linkedin.com/in/varshithgs" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="https://chat.whatsapp.com/JBmzjFNcBoR2ivOhcO136s" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="WhatsApp Community"><i data-lucide="message-square"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="footer-col-title">Organisation</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+            <li><a href="blog.html">Blog / Insights</a></li>
+            <li><a href="contact.html">Work With Us</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-col-title">Membership</h4>
+          <ul class="footer-links">
+            <li><a href="membership.html#spark">Spark Tier</a></li>
+            <li><a href="membership.html#builder">Builder Tier</a></li>
+            <li><a href="membership.html#pro">Founder Pro Tier</a></li>
+            <li><a href="membership.html#how-to-pay">How to Join</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-info">
+          Powered by <a href="https://thiranprivateltd.vercel.app" target="_blank" rel="noopener noreferrer">Thiran Private Limited</a> | Built with <span>Dream · Build · Launch</span>
+        </div>
+        <div>
+          &copy; 2026 AgniFounders. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Button (FAB) -->
+  <a href="membership.html" class="apply-fab" aria-label="Apply Now for Membership">
+    <i data-lucide="arrow-up-right"></i>
+  </a>
+
+  <!-- Lucide CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Scripts -->
+  <script src="js/global.js"></script>
+</body>
+</html>

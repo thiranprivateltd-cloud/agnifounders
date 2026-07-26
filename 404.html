@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page not found. Return to AgniFounders home.">
+  <title>404 - Page Not Found | AgniFounders</title>
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    .error-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(123, 94, 167, 0.08), transparent 70%),
+                  #0A0A0F;
+    }
+    .error-container {
+      max-width: 500px;
+      padding: 2rem;
+    }
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(5rem, 15vw, 8rem);
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 30px rgba(245, 166, 35, 0.1);
+    }
+    .error-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .error-desc {
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+    .error-logo {
+      margin-bottom: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="page-fade-in">
+    <section class="error-section">
+      <div class="error-container">
+        <!-- Logo -->
+        <div class="error-logo">
+          <a href="index.html" class="logo-link" style="justify-content: center;">
+            <div class="logo-text">AgniFounders<span>.</span></div>
+          </a>
+          <p class="logo-brand-sub" style="border-left: none; padding-left: 0; margin-left: 0; justify-content: center; margin-top: 0.5rem;">India's movement for young student founders</p>
+        </div>
+
+        <div class="error-code">404</div>
+        <h1 class="error-title">Lost in space?</h1>
+        <p class="error-desc">The page you are looking for doesn't exist, was removed, or had its URL updated. Let's get you back on track.</p>
+        
+        <a href="index.html" class="btn btn-primary" aria-label="Go back to homepage"><i data-lucide="home"></i> Go Back Home</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lucide CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>

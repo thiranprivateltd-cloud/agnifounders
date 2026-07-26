@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the founding student members of AgniFounders. Active student entrepreneurs and builders from colleges across India.">
+  <title>Our Founding Members - AgniFounders</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/members.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link" aria-label="AgniFounders Home">
+        <div class="logo-text">AgniFounders<span>.</span></div>
+        <div class="logo-brand-sub">Powered by Thiran</div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="membership.html" class="nav-link">Membership</a></li>
+          <li><a href="members.html" class="nav-link active">Members</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="https://instagram.com/thiran_groups" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="https://linkedin.com/in/varshithgs" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="membership.html" class="btn btn-primary" aria-label="Apply for membership">Apply Now</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="membership.html" class="mobile-nav-link">Membership</a></li>
+      <li><a href="members.html" class="mobile-nav-link active">Members</a></li>
+      <li><a href="events.html" class="mobile-nav-link">Events</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <a href="membership.html" class="btn btn-primary" aria-label="Apply for membership">Apply Now</a>
+  </aside>
+
+  <main class="page-fade-in">
+    <!-- Page Header -->
+    <section class="members-hero-section">
+      <div class="container text-center">
+        <h1 class="page-title">Our founding members</h1>
+        <p class="page-subtitle">Connect with high-agency student founders, hackers, and creators building the future.</p>
+      </div>
+    </section>
+
+    <!-- Filter & Search Bar Section -->
+    <section class="filter-section">
+      <div class="container">
+        <div class="filter-card card">
+          <div class="search-box-wrapper">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="member-search" placeholder="Search by name, college, or startup..." aria-label="Search members">
+          </div>
+          <div class="dropdowns-wrapper">
+            <div class="filter-group">
+              <label for="filter-city">City</label>
+              <select id="filter-city" aria-label="Filter by City">
+                <option value="all">All Cities</option>
+                <option value="Anand">Anand</option>
+                <option value="Bhubaneswar">Bhubaneswar</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Jalandhar">Jalandhar</option>
+                <option value="Kanpur">Kanpur</option>
+                <option value="Kochi">Kochi</option>
+                <option value="Vellore">Vellore</option>
+                <option value="Warangal">Warangal</option>
+              </select>
+            </div>
+            
+            <div class="filter-group">
+              <label for="filter-domain">Domain</label>
+              <select id="filter-domain" aria-label="Filter by Domain">
+                <option value="all">All Domains</option>
+                <option value="Tech">Tech</option>
+                <option value="Edtech">Edtech</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Social">Social</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="filter-tier">Tier</label>
+              <select id="filter-tier" aria-label="Filter by Membership Tier">
+                <option value="all">All Tiers</option>
+                <option value="Spark">Spark</option>
+                <option value="Builder">Builder</option>
+                <option value="Founder Pro">Founder Pro</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Members Grid -->
+    <section class="members-grid-section">
+      <div class="container">
+        <div id="members-grid" class="members-grid">
+          <!-- Rendered dynamically from localStorage database -->
+        </div>
+
+        <!-- No Results Panel -->
+        <div id="no-results" class="no-results-panel">
+          <i data-lucide="search-code" class="no-results-icon"></i>
+          <h3>No members found</h3>
+          <p>Try adjusting your search query or filters.</p>
+        </div>
+
+        <!-- Catalog CTA -->
+        <div class="catalog-cta text-center mt-3">
+          <h2>Are you building something awesome?</h2>
+          <p>Get listed, access resources, and meet India's brightest student founders.</p>
+          <a href="membership.html" class="btn btn-primary mt-2" aria-label="Join AgniFounders">Join us and be featured here →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo-col">
+          <a href="index.html" class="logo-link">
+            <div class="logo-text">AgniFounders<span>.</span></div>
+          </a>
+          <p class="footer-tagline">India's movement for young student founders aged 16–24. Dream · Build · Launch.</p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com/thiran_groups" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="https://linkedin.com/in/varshithgs" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="https://chat.whatsapp.com/JBmzjFNcBoR2ivOhcO136s" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="WhatsApp Community"><i data-lucide="message-square"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="footer-col-title">Organisation</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+            <li><a href="blog.html">Blog / Insights</a></li>
+            <li><a href="contact.html">Work With Us</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-col-title">Membership</h4>
+          <ul class="footer-links">
+            <li><a href="membership.html#spark">Spark Tier</a></li>
+            <li><a href="membership.html#builder">Builder Tier</a></li>
+            <li><a href="membership.html#pro">Founder Pro Tier</a></li>
+            <li><a href="membership.html#how-to-pay">How to Join</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-info">
+          Powered by <a href="https://thiranprivateltd.vercel.app" target="_blank" rel="noopener noreferrer">Thiran Private Limited</a> | Built with <span>Dream · Build · Launch</span>
+        </div>
+        <div>
+          &copy; 2026 AgniFounders. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Button (FAB) -->
+  <a href="membership.html" class="apply-fab" aria-label="Apply Now for Membership">
+    <i data-lucide="arrow-up-right"></i>
+  </a>
+
+  <!-- Lucide CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Scripts -->
+  <script src="js/global.js"></script>
+  <script src="js/members.js"></script>
+</body>
+</html>
