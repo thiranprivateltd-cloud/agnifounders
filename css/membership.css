@@ -1,0 +1,563 @@
+/* ==========================================================================
+   AGNI FOUNDERS - MEMBERSHIP PAGE SPECIFIC CSS
+   ========================================================================== */
+
+/* 1. Membership Hero Header */
+.membership-hero {
+  padding: 8rem 0 3rem 0;
+  background: radial-gradient(circle at bottom, rgba(123, 94, 167, 0.08), transparent 70%),
+              #0A0A0F;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.page-title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 2. Pricing Section & Grid */
+.pricing-cards-section {
+  background-color: #0A0A0F;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Featured / Popular card tweaks */
+.featured-card {
+  transform: translateY(-8px);
+  border-color: var(--color-builder) !important;
+  box-shadow: 0 10px 30px rgba(55, 138, 221, 0.15);
+}
+
+.most-popular-label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-builder);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.35rem 1.2rem;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 10px rgba(55, 138, 221, 0.2);
+}
+
+.pricing-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: fit-content;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-badge.spark {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--color-spark);
+}
+
+.pricing-badge.builder {
+  background-color: rgba(55, 138, 221, 0.1);
+  color: var(--color-builder);
+}
+
+.pricing-badge.pro {
+  background-color: rgba(245, 166, 35, 0.1);
+  color: var(--color-founder-pro);
+}
+
+.border-spark-solid {
+  border-color: var(--border-color);
+}
+.border-spark-solid:hover {
+  border-color: var(--color-spark) !important;
+}
+
+.border-builder-solid:hover {
+  border-color: var(--color-builder) !important;
+}
+
+.border-pro-solid {
+  border-color: var(--border-color);
+}
+.border-pro-solid:hover {
+  border-color: var(--color-founder-pro) !important;
+}
+
+/* Ambient glow backgrounds in pricing cards */
+.card-glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.spark-glow { background-color: var(--color-spark); }
+.builder-glow { background-color: var(--color-builder); }
+.pro-glow { background-color: var(--color-founder-pro); }
+
+.tier-action-wrapper {
+  margin: 1.5rem 0;
+}
+
+.tier-features-list {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+.tier-features-list h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.tier-features-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.tier-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.tier-features-list li strong {
+  color: var(--text-primary);
+}
+
+.tier-features-list svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.payment-disclaimer {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .featured-card {
+    transform: translateY(0);
+  }
+}
+
+/* 3. Toggle Forms Panel */
+.forms-wrapper {
+  margin-top: 3rem;
+}
+
+.form-container-panel {
+  display: none; /* Controlled via JavaScript */
+  animation: slideDownFade 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  margin-bottom: 3rem;
+  padding: 0;
+  overflow: hidden;
+}
+
+.form-container-panel.active {
+  display: block;
+}
+
+.form-header {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.01);
+  border-bottom: 1px solid var(--border-color);
+  border-top: 3px solid transparent;
+}
+
+.form-header.border-spark { border-top-color: var(--color-spark); }
+.form-header.border-builder { border-top-color: var(--color-builder); }
+.form-header.border-pro { border-top-color: var(--color-founder-pro); }
+
+.form-header h3 {
+  font-size: 1.5rem;
+}
+
+.form-header p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.form-split {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: stretch;
+}
+
+.form-iframe-wrapper {
+  padding: 2rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.form-iframe-wrapper iframe {
+  background-color: var(--bg-primary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.form-checkout-panel {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.01);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.form-checkout-panel h4 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.price-tag {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 1.5rem;
+}
+
+.qr-code-wrapper {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 220px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.qr-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.payment-details {
+  max-width: 300px;
+}
+
+.upi-id {
+  font-family: monospace;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  word-break: break-all;
+}
+
+.helper-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .form-split {
+    grid-template-columns: 1fr;
+  }
+  .form-iframe-wrapper {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+  }
+  .form-checkout-panel {
+    padding: 2rem 1rem;
+  }
+}
+
+/* 4. Payment Steps Grid */
+.how-to-pay-section {
+  background-color: #060609;
+  border-top: 1px solid var(--border-color);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.step-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-secondary);
+}
+
+.step-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(123, 94, 167, 0.25);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.step-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+}
+
+.step-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 5. FAQ Accordion */
+.faq-section {
+  background-color: #0A0A0F;
+  border-top: 1px solid var(--border-color);
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.faq-item:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  gap: 1.5rem;
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
+  padding: 0 1.5rem;
+}
+
+.faq-answer p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  padding-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+/* FAQ Active Styles via JS classes */
+.faq-item.active {
+  border-color: var(--accent-primary);
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  color: var(--accent-primary);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; /* Safe limit for description */
+}
+
+/* 6. Native Form Styling (Fallback / Local database simulation) */
+.native-member-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  background-color: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 10px rgba(123, 94, 167, 0.25);
+}
+
+.form-success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  animation: slideDownFade 0.4s ease forwards;
+}
+
+.success-icon-box {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--color-spark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.success-icon-box svg {
+  width: 36px;
+  height: 36px;
+}
+
+.form-success-message h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.form-success-message p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  max-width: 320px;
+  line-height: 1.6;
+}
+
+.hidden {
+  display: none !important;
+}
+

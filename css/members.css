@@ -1,0 +1,327 @@
+/* ==========================================================================
+   AGNI FOUNDERS - MEMBERS DIRECTORY CSS
+   ========================================================================== */
+
+/* 1. Page Header */
+.members-hero-section {
+  padding: 8rem 0 3rem 0;
+  background: radial-gradient(circle at bottom, rgba(123, 94, 167, 0.08), transparent 70%),
+              #0A0A0F;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+/* 2. Filter Controls Dashboard */
+.filter-section {
+  background-color: #0A0A0F;
+  padding: 3rem 0 1.5rem 0;
+}
+
+.filter-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.search-box-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 1.25rem;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: var(--text-secondary);
+}
+
+.search-box-wrapper input {
+  width: 100%;
+  padding: 0.85rem 1.25rem 0.85rem 3rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+}
+
+.search-box-wrapper input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.dropdowns-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+
+.filter-group select {
+  padding: 0.75rem 1.25rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='16' height='16' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%238A8A9A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .dropdowns-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* 3. Members Display Grid */
+.members-grid-section {
+  background-color: #0A0A0F;
+  padding: 1.5rem 0 6rem 0;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.member-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.avatar-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.avatar-orange { background: linear-gradient(135deg, #F5A623, #D35400); }
+.avatar-blue { background: linear-gradient(135deg, #3498DB, #2980B9); }
+.avatar-purple { background: linear-gradient(135deg, #9B59B6, #8E44AD); }
+.avatar-green { background: linear-gradient(135deg, #2ECC71, #27AE60); }
+
+.member-meta-title h3 {
+  font-size: 1.15rem;
+}
+
+.member-college {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.member-body {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.member-city {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.member-city svg {
+  width: 14px;
+  height: 14px;
+  color: var(--accent-primary);
+}
+
+.member-startup {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.member-startup svg {
+  width: 15px;
+  height: 15px;
+  color: var(--accent-secondary);
+}
+
+.member-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.domain-tag {
+  font-size: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.tier-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.tier-tag.badge-pro {
+  background-color: rgba(245, 166, 35, 0.1);
+  color: var(--color-founder-pro);
+}
+
+.tier-tag.badge-builder {
+  background-color: rgba(55, 138, 221, 0.1);
+  color: var(--color-builder);
+}
+
+.tier-tag.badge-spark {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--color-spark);
+}
+
+.member-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.member-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.member-linkedin:hover {
+  color: var(--accent-primary);
+}
+
+.member-linkedin svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 992px) {
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 4. No Results Alert Panel */
+.no-results-panel {
+  display: none; /* Controlled by JS filters */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.no-results-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.no-results-panel h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.no-results-panel p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* 5. Catalog Invitation Box */
+.catalog-cta {
+  background: radial-gradient(circle at center, rgba(123, 94, 167, 0.1), transparent 80%),
+              var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 4rem auto 0 auto;
+}
+
+.catalog-cta h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.catalog-cta p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}

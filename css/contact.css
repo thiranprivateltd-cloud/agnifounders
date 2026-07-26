@@ -1,0 +1,258 @@
+/* ==========================================================================
+   AGNI FOUNDERS - CONTACT PAGE CSS
+   ========================================================================== */
+
+/* 1. Page Hero Header */
+.contact-hero {
+  padding: 8rem 0 3rem 0;
+  background: radial-gradient(circle at bottom, rgba(123, 94, 167, 0.08), transparent 70%),
+              #0A0A0F;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+/* 2. Grid & Columns */
+.form-split-section {
+  background-color: #0A0A0F;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-info-col .section-title::after {
+  left: 0;
+  transform: none;
+  width: 60px;
+}
+
+.info-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+}
+
+.info-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(245, 166, 35, 0.1);
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.info-icon-box svg {
+  width: 24px;
+  height: 24px;
+}
+
+.info-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.info-link {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  word-break: break-all;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.info-link:hover {
+  color: var(--accent-primary);
+  border-bottom-color: var(--accent-primary);
+}
+
+/* 3. Form Styling */
+.contact-form-card {
+  padding: 2.5rem;
+}
+
+.contact-form-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-input-group label {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+
+.form-input-group input,
+.form-input-group select,
+.form-input-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+}
+
+.form-input-group input:focus,
+.form-input-group select:focus,
+.form-input-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.form-input-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='16' height='16' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%238A8A9A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  cursor: pointer;
+}
+
+.form-input-group textarea {
+  resize: vertical;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+}
+
+/* 4. Ambassador Section */
+.ambassador-section {
+  background-color: #060609;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ambassador-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ambassador-text-col .section-title::after {
+  left: 0;
+  transform: none;
+  width: 60px;
+}
+
+.ambassador-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ambassador-perks li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.ambassador-perks svg {
+  width: 18px;
+  height: 18px;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.form-frame-card {
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.form-frame-card iframe {
+  display: block;
+  background-color: var(--bg-primary);
+}
+
+/* 5. Partnership call to action */
+.partnership-section {
+  background-color: #0A0A0F;
+}
+
+.partnership-box {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3.5rem 2.5rem;
+  background: radial-gradient(circle at center, rgba(123, 94, 167, 0.1), transparent 80%),
+              var(--bg-surface);
+}
+
+.partnership-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.partnership-box p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.7;
+}
