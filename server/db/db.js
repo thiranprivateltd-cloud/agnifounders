@@ -10,7 +10,7 @@ const { Pool } = require('pg');
 const bcrypt = require('bcrypt');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const dbUrl = process.env.DATABASE_URL;
+const dbUrl = process.env.https://agnifounders.vercel.app/portal/login;
 
 let pgPool = null;
 const jsonDbPath = path.join(__dirname, 'database.json');
