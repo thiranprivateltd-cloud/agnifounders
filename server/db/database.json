@@ -1,0 +1,112 @@
+{
+  "users": [
+    {
+      "id": 1785080409385,
+      "email": "Admin@agnifounders.in",
+      "password_hash": "$2b$10$bSja/xUPI6tiavfpHfwSUeGtm.Ph9rISUkeAsYHhg1cZIszD6khT6",
+      "role": "Super Admin",
+      "password_changed": true,
+      "created_at": "2026-07-26T15:40:09.385Z"
+    },
+    {
+      "id": 1785666631097.2117,
+      "email": "varshithgs@agnifounders-temp.in",
+      "password_hash": "$2b$10$ytoCzqpse4Y.1yilPZtSdO/nH4r1Fhl91h/B9NClPBfVfeQGsjjQq",
+      "role": "Member",
+      "application_id": "AG-SPA-2026-0001",
+      "password_changed": true,
+      "created_at": "2026-08-02T10:30:31.097Z"
+    }
+  ],
+  "applications": [
+    {
+      "id": 1785666569141.8716,
+      "application_id": "AG-SPA-2026-0001",
+      "date_submitted": "2026-08-02T10:29:29.141Z",
+      "membership_type": "Spark",
+      "status": "Approved",
+      "form_data": {
+        "name": "Varshith G S",
+        "college": "VEL TECH RANGARAJAN DR.SAGUNTHALA R&D INSTITUTE OF SCIENCE & TECHNOLOGYCSE",
+        "city": "Chennai",
+        "year": "Third Year",
+        "working": "Exploring",
+        "domain": "Edtech",
+        "hear": "Friend/Word of Mouth",
+        "social": "linkedin.com/in/varshithgs",
+        "why": "DDVDZDBGBGXZV",
+        "challenge": "DAsGEAETF",
+        "txn": "618294758625",
+        "tier": "Spark",
+        "email": "varshithgs@agnifounders-temp.in",
+        "screenshot_url": "/uploads/screenshot_1785666569119.jpg",
+        "pitch_doc_url": ""
+      },
+      "details_verified": true,
+      "payment_verified": true
+    }
+  ],
+  "payments": [
+    {
+      "id": 1785666569145.9905,
+      "application_id": "AG-SPA-2026-0001",
+      "transaction_id": "618294758625",
+      "screenshot_url": "/uploads/screenshot_1785666569119.jpg",
+      "amount": 299,
+      "payment_date": "2026-08-02T10:29:29.145Z",
+      "status": "Verified"
+    }
+  ],
+  "membership_cards": [
+    {
+      "id": 1785666631205.742,
+      "application_id": "AG-SPA-2026-0001",
+      "member_name": "Varshith G S",
+      "membership_type": "Spark",
+      "startup_name": "",
+      "qr_code_url": "data:image/png;base64,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",
+      "issue_date": "2026-08-02T10:30:31.098Z",
+      "expiry_date": "2027-08-02T10:30:31.098Z",
+      "card_pdf_url": "/cards/AG-SPA-2026-0001_card.pdf",
+      "card_png_url": "/cards/AG-SPA-2026-0001_card.png"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": 1785666260568.5735,
+      "user_id": 1785080409385,
+      "action": "Password Changed",
+      "details": "Password updated successfully",
+      "timestamp": "2026-08-02T10:24:20.568Z"
+    },
+    {
+      "id": 1785666569150.666,
+      "user_id": "System",
+      "action": "Application Submitted",
+      "details": "Application created for Varshith G S (AG-SPA-2026-0001)",
+      "timestamp": "2026-08-02T10:29:29.150Z"
+    },
+    {
+      "id": 1785666594799.671,
+      "user_id": 1785080409385,
+      "action": "Approve Details",
+      "details": "Details approved for AG-SPA-2026-0001",
+      "timestamp": "2026-08-02T10:29:54.799Z"
+    },
+    {
+      "id": 1785666631210.1543,
+      "user_id": 1785080409385,
+      "action": "Approve Payment & Generate Card",
+      "details": "Payment verified and member credentials issued for AG-SPA-2026-0001",
+      "timestamp": "2026-08-02T10:30:31.210Z"
+    },
+    {
+      "id": 1785666904074.9094,
+      "user_id": 1785666631097.2117,
+      "action": "Password Changed",
+      "details": "Password updated successfully",
+      "timestamp": "2026-08-02T10:35:04.074Z"
+    }
+  ],
+  "settings": {}
+}
