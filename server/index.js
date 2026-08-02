@@ -54,6 +54,15 @@ const upload = multer({
 
 // Serve public static folder
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Serve React Portal SPA routing fallback (placed before parent static directory to avoid source folder conflicts)
+app.get('/portal', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'portal', 'index.html'));
+});
+app.get('/portal/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'portal', 'index.html'));
+});
+
 // Serve static landing pages from the root
 app.use(express.static(path.join(__dirname, '..')));
 
@@ -507,16 +516,19 @@ app.get('/verify/:appId', async (req, res) => {
   }
 });
 
-// Serve React Portal SPA routing fallback
-app.get('/portal/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'portal', 'index.html'));
-});
+
 
 // Initialize database schema and fire up listener
-initializeDatabase().then(() => {
-  app.listen(PORT, () => {
-    console.log(`AgniFounders API Server running on port ${PORT}`);
+if (process.env.VERCEL) {
+  initializeDatabase().catch(err => console.error('Database init error:', err));
+} else {
+  initializeDatabase().then(() => {
+    app.listen(PORT, () => {
+      console.log(`AgniFounders API Server running on port ${PORT}`);
+    });
+  }).catch(err => {
+    console.error('Fatal: Database initialization failed:', err);
   });
-}).catch(err => {
-  console.error('Fatal: Database initialization failed:', err);
-});
+}
+
+module.exports = app;
