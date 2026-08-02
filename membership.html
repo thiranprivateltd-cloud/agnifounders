@@ -29,9 +29,8 @@
         </ul>
       </nav>
       <div class="nav-cta">
-        <a href="https://instagram.com/thiran_groups" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-        <a href="https://linkedin.com/in/varshithgs" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-        <a href="membership.html" class="btn btn-primary" aria-label="Apply for membership">Apply Now</a>
+
+        <a href="/portal/login" class="btn btn-outline-amber" style="margin-right: 0.5rem; padding: 0.6rem 1.2rem;">Login</a><a href="membership.html" class="btn btn-primary" aria-label="Apply for membership">Apply Now</a>
       </div>
       <button class="hamburger" aria-label="Toggle Navigation Menu">
         <span></span>
@@ -53,7 +52,7 @@
       <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
       <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
     </ul>
-    <a href="membership.html" class="btn btn-primary" aria-label="Apply for membership">Apply Now</a>
+    <a href="/portal/login" class="btn btn-outline-amber" style="margin-right: 0.5rem; padding: 0.6rem 1.2rem;">Login</a><a href="membership.html" class="btn btn-primary" aria-label="Apply for membership">Apply Now</a>
   </aside>
 
   <main class="page-fade-in">
@@ -159,40 +158,93 @@
                 <form class="native-member-form" data-tier="Spark">
                   <div class="form-group">
                     <label for="spark-name">Full Name *</label>
-                    <input type="text" id="spark-name" name="name" required placeholder="e.g. Varshith G S">
+                    <input type="text" id="spark-name" name="name" required placeholder="Your name">
                   </div>
                   <div class="form-group">
-                    <label for="spark-college">College / Institution *</label>
-                    <input type="text" id="spark-college" name="college" required placeholder="e.g. PSG College of Technology">
+                    <label for="spark-college">College Name *</label>
+                    <input type="text" id="spark-college" name="college" required placeholder="Your college">
                   </div>
                   <div class="form-group">
                     <label for="spark-city">City *</label>
-                    <input type="text" id="spark-city" name="city" required placeholder="e.g. Coimbatore">
+                    <input type="text" id="spark-city" name="city" required placeholder="Your city">
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="spark-year">Year of Study *</label>
+                      <select id="spark-year" name="year" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="First Year">First Year</option>
+                        <option value="Second Year">Second Year</option>
+                        <option value="Third Year">Third Year</option>
+                        <option value="Fourth Year">Fourth Year</option>
+                        <option value="Final Year">Final Year</option>
+                        <option value="Postgraduate">Postgraduate</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="spark-working">Working on startup? *</label>
+                      <select id="spark-working" name="working" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="Exploring">Exploring</option>
+                        <option value="Not yet">Not yet</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="spark-domain">Field of interest *</label>
+                      <select id="spark-domain" name="domain" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Tech">Tech / Software</option>
+                        <option value="Edtech">EdTech</option>
+                        <option value="Commerce">E-Commerce</option>
+                        <option value="Social Impact">Social Impact</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="spark-hear">How did you hear? *</label>
+                      <select id="spark-hear" name="hear" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Friend/Word of Mouth">Friend/Word of Mouth</option>
+                        <option value="College/Campus Club">College/Campus Club</option>
+                        <option value="Email">Email</option>
+                        <option value="Search">Search</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="spark-domain">Primary Domain of Interest *</label>
-                    <select id="spark-domain" name="domain" required>
-                      <option value="" disabled selected>Select your domain</option>
-                      <option value="Tech">Tech / Software</option>
-                      <option value="Edtech">EdTech</option>
-                      <option value="Commerce">E-Commerce</option>
-                      <option value="Social">Social Impact</option>
-                      <option value="Other">Other</option>
-                    </select>
+                    <label for="spark-social">Instagram or LinkedIn Handle *</label>
+                    <input type="text" id="spark-social" name="social" required placeholder="e.g. linkedin.com/in/username">
+                  </div>
+                  <div class="form-group">
+                    <label for="spark-why">Why do you want to join? (2-3 lines) *</label>
+                    <textarea id="spark-why" name="why" rows="3" required placeholder="What drives you to join AgniFounders?"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="spark-challenge">Biggest challenge right now *</label>
+                    <textarea id="spark-challenge" name="challenge" rows="3" required placeholder="Describe what you are struggling with..."></textarea>
                   </div>
                   <div class="form-group">
                     <label for="spark-txn">UPI Transaction ID *</label>
-                    <input type="text" id="spark-txn" name="txn" required placeholder="e.g. 618294729184">
+                    <input type="text" id="spark-txn" name="txn" required placeholder="12-digit transaction ID">
+                  </div>
+                  <div class="form-group">
+                    <label for="spark-screenshot">Upload Screenshot (Proof of Payment) *</label>
+                    <input type="file" id="spark-screenshot" name="screenshot" accept="image/*" required>
                   </div>
                   <button type="submit" class="btn btn-primary w-full mt-1">Submit Application <i data-lucide="send"></i></button>
                 </form>
-                <div class="form-success-message hidden">
-                  <div class="success-icon-box">
-                    <i data-lucide="check-circle"></i>
+                <div class="form-success-message hidden text-center" style="padding: 2rem 1rem;">
+                  <div class="success-icon-box" style="margin: 0 auto 1.5rem auto; width: 64px; height: 64px; background-color: rgba(46, 204, 113, 0.1); color: var(--color-spark); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i data-lucide="check-circle" style="width: 36px; height: 36px;"></i>
                   </div>
                   <h3>Application Submitted!</h3>
-                  <p>Thank you for applying. Since this is local storage powered, your member profile is now live in the directory!</p>
-                  <a href="members.html" class="btn btn-outline-amber mt-1">View Directory</a>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">Your Spark application has been successfully saved. Welcome to AgniFounders!</p>
+                  <a href="members.html" class="btn btn-outline-amber mt-2">View Directory</a>
                 </div>
               </div>
               <div class="form-checkout-panel">
@@ -220,48 +272,114 @@
                 <form class="native-member-form" data-tier="Builder">
                   <div class="form-group">
                     <label for="builder-name">Full Name *</label>
-                    <input type="text" id="builder-name" name="name" required placeholder="e.g. Mukunthan S">
+                    <input type="text" id="builder-name" name="name" required placeholder="Your name">
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="builder-college">College Name *</label>
+                      <input type="text" id="builder-college" name="college" required placeholder="Your college">
+                    </div>
+                    <div class="form-group">
+                      <label for="builder-city">City *</label>
+                      <input type="text" id="builder-city" name="city" required placeholder="Your city">
+                    </div>
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="builder-year">Year of Study *</label>
+                      <select id="builder-year" name="year" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="First Year">First Year</option>
+                        <option value="Second Year">Second Year</option>
+                        <option value="Third Year">Third Year</option>
+                        <option value="Fourth Year">Fourth Year</option>
+                        <option value="Final Year">Final Year</option>
+                        <option value="Postgraduate">Postgraduate</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="builder-phone">Phone Number *</label>
+                      <input type="tel" id="builder-phone" name="phone" required placeholder="10-digit number">
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="builder-college">College / Institution *</label>
-                    <input type="text" id="builder-college" name="college" required placeholder="e.g. VIT Chennai">
+                    <label for="builder-startup">What are you building? (Startup Name + description) *</label>
+                    <input type="text" id="builder-startup" name="startup" required placeholder="e.g. AgriFlow: smart water sensors for farmers">
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="builder-stage">Stage *</label>
+                      <select id="builder-stage" name="stage" required>
+                        <option value="" disabled selected>Select Stage</option>
+                        <option value="Idea">Idea</option>
+                        <option value="Prototype">Prototype</option>
+                        <option value="Beta users">Beta users</option>
+                        <option value="Revenue">Revenue</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="builder-duration">How long working on it? *</label>
+                      <input type="text" id="builder-duration" name="duration" required placeholder="e.g. 3 months, 1 year">
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="builder-city">City *</label>
-                    <input type="text" id="builder-city" name="city" required placeholder="e.g. Chennai">
+                    <label for="builder-problem">One specific problem you're solving *</label>
+                    <textarea id="builder-problem" name="problem" rows="3" required placeholder="What pain point does your project target?"></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="builder-startup">Startup / Project Name *</label>
-                    <input type="text" id="builder-startup" name="startup" required placeholder="e.g. AgriFlow">
+                    <label for="builder-customer">Who is your target customer? *</label>
+                    <textarea id="builder-customer" name="customer" rows="3" required placeholder="Describe your user persona..."></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="builder-domain">Primary Domain *</label>
-                    <select id="builder-domain" name="domain" required>
-                      <option value="" disabled selected>Select your domain</option>
-                      <option value="Tech">Tech / Software</option>
-                      <option value="Edtech">EdTech</option>
-                      <option value="Commerce">E-Commerce</option>
-                      <option value="Social">Social Impact</option>
-                      <option value="Other">Other</option>
-                    </select>
+                    <label>Support needed most *</label>
+                    <div class="form-checkbox-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem;">
+                      <label class="checkbox-option-item"><input type="checkbox" name="support_needed" value="Technical"><span>Technical</span></label>
+                      <label class="checkbox-option-item"><input type="checkbox" name="support_needed" value="Marketing"><span>Marketing</span></label>
+                      <label class="checkbox-option-item"><input type="checkbox" name="support_needed" value="Funding"><span>Funding</span></label>
+                      <label class="checkbox-option-item"><input type="checkbox" name="support_needed" value="Mentorship"><span>Mentorship</span></label>
+                    </div>
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="builder-collab">Open to collaborating? *</label>
+                      <select id="builder-collab" name="collab" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="builder-linkedin">LinkedIn/Portfolio link *</label>
+                      <input type="url" id="builder-linkedin" name="linkedin" required placeholder="https://linkedin.com/in/username">
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="builder-linkedin">LinkedIn Profile URL *</label>
-                    <input type="url" id="builder-linkedin" name="linkedin" required placeholder="e.g. https://linkedin.com/in/username">
+                    <label for="builder-why">Why Builder and not Spark? *</label>
+                    <textarea id="builder-why" name="why_builder" rows="3" required placeholder="Explain why this tier fits your stage..."></textarea>
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="builder-pitch">Pitch Doc Upload (Optional)</label>
+                      <input type="file" id="builder-pitch" name="pitch_doc">
+                    </div>
+                    <div class="form-group">
+                      <label for="builder-screenshot">Payment Screenshot *</label>
+                      <input type="file" id="builder-screenshot" name="screenshot" accept="image/*" required>
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="builder-txn">UPI Transaction ID *</label>
-                    <input type="text" id="builder-txn" name="txn" required placeholder="e.g. 618294729184">
+                    <input type="text" id="builder-txn" name="txn" required placeholder="12-digit transaction ID">
                   </div>
                   <button type="submit" class="btn btn-primary w-full mt-1">Submit Application <i data-lucide="send"></i></button>
                 </form>
-                <div class="form-success-message hidden">
-                  <div class="success-icon-box">
-                    <i data-lucide="check-circle"></i>
+                <div class="form-success-message hidden text-center" style="padding: 2rem 1rem;">
+                  <div class="success-icon-box" style="margin: 0 auto 1.5rem auto; width: 64px; height: 64px; background-color: rgba(46, 204, 113, 0.1); color: var(--color-spark); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i data-lucide="check-circle" style="width: 36px; height: 36px;"></i>
                   </div>
                   <h3>Application Submitted!</h3>
-                  <p>Thank you for applying. Since this is local storage powered, your member profile is now live in the directory!</p>
-                  <a href="members.html" class="btn btn-outline-amber mt-1">View Directory</a>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">Your Builder application has been successfully saved. Welcome to AgniFounders!</p>
+                  <a href="members.html" class="btn btn-outline-amber mt-2">View Directory</a>
                 </div>
               </div>
               <div class="form-checkout-panel">
@@ -289,48 +407,128 @@
                 <form class="native-member-form" data-tier="Founder Pro">
                   <div class="form-group">
                     <label for="pro-name">Full Name *</label>
-                    <input type="text" id="pro-name" name="name" required placeholder="e.g. Dharshan S">
+                    <input type="text" id="pro-name" name="name" required placeholder="Your name">
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="pro-college">College *</label>
+                      <input type="text" id="pro-college" name="college" required placeholder="Your college">
+                    </div>
+                    <div class="form-group">
+                      <label for="pro-city">City *</label>
+                      <input type="text" id="pro-city" name="city" required placeholder="Your city">
+                    </div>
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="pro-phone">Phone *</label>
+                      <input type="tel" id="pro-phone" name="phone" required placeholder="Mobile number">
+                    </div>
+                    <div class="form-group">
+                      <label for="pro-email">Email *</label>
+                      <input type="email" id="pro-email" name="email" required placeholder="Email address">
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="pro-college">College / Institution *</label>
-                    <input type="text" id="pro-college" name="college" required placeholder="e.g. IIT Madras">
+                    <label for="pro-startup">Startup name + website/app link *</label>
+                    <input type="text" id="pro-startup" name="startup" required placeholder="e.g. Zenith Lab - https://zenithlab.co">
                   </div>
                   <div class="form-group">
-                    <label for="pro-city">City *</label>
-                    <input type="text" id="pro-city" name="city" required placeholder="e.g. Chennai">
+                    <label for="pro-describe">Describe your startup in 3 sentences *</label>
+                    <textarea id="pro-describe" name="description" rows="3" required placeholder="What does your startup do, who is it for, and why is it unique?"></textarea>
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="pro-users">Monthly active users/customers *</label>
+                      <input type="text" id="pro-users" name="users" required placeholder="e.g. 500, 2000, 0">
+                    </div>
+                    <div class="form-group">
+                      <label for="pro-rev">Revenue stage *</label>
+                      <select id="pro-rev" name="revenue_stage" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Pre-revenue">Pre-revenue</option>
+                        <option value="First sales">First sales</option>
+                        <option value="₹1K–10K per month">₹1K–10K per month</option>
+                        <option value="Above ₹10K">Above ₹10K</option>
+                      </select>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="pro-startup">Startup / Company Name *</label>
-                    <input type="text" id="pro-startup" name="startup" required placeholder="e.g. Zenith Lab">
+                    <label for="pro-bottleneck">Biggest bottleneck right now *</label>
+                    <textarea id="pro-bottleneck" name="bottleneck" rows="3" required placeholder="Funding, user acquisition, tech stack, hiring co-founders..."></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="pro-domain">Primary Domain *</label>
-                    <select id="pro-domain" name="domain" required>
-                      <option value="" disabled selected>Select your domain</option>
-                      <option value="Tech">Tech / Software</option>
-                      <option value="Edtech">EdTech</option>
-                      <option value="Commerce">E-Commerce</option>
-                      <option value="Social">Social Impact</option>
-                      <option value="Other">Other</option>
-                    </select>
+                    <label for="pro-pitch-details">Have you pitched before? (Yes/No, and details) *</label>
+                    <textarea id="pro-pitch-details" name="pitch_details" rows="2" required placeholder="e.g. Yes, pitched at campus E-Cell; No, first time pitching."></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="pro-linkedin">LinkedIn Profile URL *</label>
-                    <input type="url" id="pro-linkedin" name="linkedin" required placeholder="e.g. https://linkedin.com/in/username">
+                    <label for="pro-expect">What do you want from Founder Pro specifically? *</label>
+                    <textarea id="pro-expect" name="pro_expectations" rows="3" required placeholder="Mentorship, partner SaaS credits, investor network..."></textarea>
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="pro-press">Open to press/social features? *</label>
+                      <select id="pro-press" name="press" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="pro-upgrade">Need website/digital upgrade? *</label>
+                      <select id="pro-upgrade" name="upgrade" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Already have one">Already have one</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="pro-cofounder">Co-founder name (Optional)</label>
+                      <input type="text" id="pro-cofounder" name="cofounder" placeholder="If applicable">
+                    </div>
+                    <div class="form-group">
+                      <label for="pro-linkedin">LinkedIn Profile URL *</label>
+                      <input type="url" id="pro-linkedin" name="linkedin" required placeholder="https://linkedin.com/in/username">
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="pro-txn">UPI Transaction ID *</label>
-                    <input type="text" id="pro-txn" name="txn" required placeholder="e.g. 618294729184">
+                    <label for="pro-meaning">"What does Dream · Build · Launch mean to you?" *</label>
+                    <textarea id="pro-meaning" name="meaning" rows="3" required placeholder="Share your perspective..."></textarea>
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="pro-pitchdoc">Pitch deck / screenshots (Optional)</label>
+                      <input type="file" id="pro-pitchdoc" name="pitch_deck">
+                    </div>
+                    <div class="form-group">
+                      <label for="pro-screenshot">Payment Screenshot *</label>
+                      <input type="file" id="pro-screenshot" name="screenshot" accept="image/*" required>
+                    </div>
+                  </div>
+                  <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label for="pro-txn">UPI Transaction ID *</label>
+                      <input type="text" id="pro-txn" name="txn" required placeholder="12-digit transaction ID">
+                    </div>
+                    <div class="form-group" style="display: flex; align-items: center; margin-top: 1.5rem;">
+                      <label class="checkbox-option-item">
+                        <input type="checkbox" name="declaration" value="Agree" required>
+                        <span>I confirm this is a real startup I am actively building *</span>
+                      </label>
+                    </div>
                   </div>
                   <button type="submit" class="btn btn-primary w-full mt-1">Submit Application <i data-lucide="send"></i></button>
                 </form>
-                <div class="form-success-message hidden">
-                  <div class="success-icon-box">
-                    <i data-lucide="check-circle"></i>
+                <div class="form-success-message hidden text-center" style="padding: 2rem 1rem;">
+                  <div class="success-icon-box" style="margin: 0 auto 1.5rem auto; width: 64px; height: 64px; background-color: rgba(46, 204, 113, 0.1); color: var(--color-spark); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i data-lucide="check-circle" style="width: 36px; height: 36px;"></i>
                   </div>
                   <h3>Application Submitted!</h3>
-                  <p>Thank you for applying. Since this is local storage powered, your member profile is now live in the directory!</p>
-                  <a href="members.html" class="btn btn-outline-amber mt-1">View Directory</a>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">Your Founder Pro application has been successfully saved. Welcome to AgniFounders!</p>
+                  <a href="members.html" class="btn btn-outline-amber mt-2">View Directory</a>
                 </div>
               </div>
               <div class="form-checkout-panel">
