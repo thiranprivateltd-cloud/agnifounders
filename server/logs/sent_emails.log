@@ -1,1 +1,76 @@
 
+========================================================================
+TIMESTAMP: 2026-08-02T10:29:29.220Z
+TO: varshithgs@agnifounders-temp.in
+SUBJECT: Application Received – AgniFounders Membership
+BODY:
+
+AgniFounders
+Hello Applicant,
+Thank you for applying to AgniFounders. Your application has been successfully received.
+Application ID:
+ AG-SPA-2026-0001
+Membership Type:
+ Spark
+Current Status:
+ Pending Review
+Date Submitted:
+ 2/8/2026
+Our Membership Team will verify your submitted details and payment transaction receipt before final approval.
+You will receive another notification once your application review proceeds to the next stage.
+        Support: 
+thiranprivateltd@gmail.com
+        Website: 
+agnifounders.in
+  
+========================================================================
+
+========================================================================
+TIMESTAMP: 2026-08-02T10:29:54.801Z
+TO: varshithgs@agnifounders-temp.in
+SUBJECT: Details Approved – AgniFounders Membership
+BODY:
+
+AgniFounders
+Dear Applicant,
+Your profile details have been verified and **Approved** by our Membership Team!
+Your application is now in the 
+Payment Verification
+ phase. We are validating your transaction reference number against our banking statement. You will receive a password setup email once this is completed.
+Application ID: 
+AG-SPA-2026-0001
+  
+========================================================================
+
+========================================================================
+TIMESTAMP: 2026-08-02T10:30:31.211Z
+TO: varshithgs@agnifounders-temp.in
+SUBJECT: Payment Verified – AgniFounders Membership
+BODY:
+
+AgniFounders
+Dear Applicant,
+Your membership payment has been verified successfully!
+Your application has moved to the **Final Approval** stage. You will receive your welcome credentials and membership card generation links shortly.
+Application ID: 
+AG-SPA-2026-0001
+  
+========================================================================
+
+========================================================================
+TIMESTAMP: 2026-08-02T10:30:31.213Z
+TO: varshithgs@agnifounders-temp.in
+SUBJECT: Welcome to AgniFounders – Membership Approved!
+BODY:
+
+AgniFounders
+Congratulations!
+Your application 
+AG-SPA-2026-0001
+ has been fully approved by the committee. You are now a recognized member of AgniFounders.
+To access your member profile, premium SaaS credits, networking portals, and download your digital membership card, please configure your account password using the link below:
+Setup Account Password
+If the button above does not work, copy and paste this link in your browser: http://localhost:8000/portal/setup-password?id=AG-SPA-2026-0001
+Welcome aboard!
+  
+========================================================================
