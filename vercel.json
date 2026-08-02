@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/portal/assets/:path*",
+      "destination": "/server/public/portal/assets/:path*"
+    },
+    {
+      "source": "/portal/:path*",
+      "destination": "/server/public/portal/index.html"
+    },
+    {
+      "source": "/verify/:path*",
+      "destination": "/api/verify/:path*"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "/api/index.js"
+    }
+  ]
+}
