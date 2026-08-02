@@ -10,7 +10,8 @@ const { Pool } = require('pg');
 const bcrypt = require('bcrypt');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const dbUrl = process.env.https://agnifounders.vercel.app/portal/login;
+const dbUrl = process.env.postgresql://neondb_owner:npg_trpO2j6HGVwn@ep-long-silence-au7x2342-pooler.c-10.us-east-1.aws.neon.tech/neondb?channel_binding=require&sslmode=require
+;
 
 let pgPool = null;
 const jsonDbPath = path.join(__dirname, 'database.json');
